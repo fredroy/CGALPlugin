@@ -58,6 +58,8 @@ jobs:
                   -DCMAKE_PREFIX_PATH="$SOFA_ROOT/lib/cmake" \
                   -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_INSTALL_PREFIX="$WORKSPACE_INSTALL_PATH" \
+                  -DMPFR_LIBRARIES="${{ runner.temp }}/cgal_dir/auxiliary/gmp/lib/libmpfr-4.lib" \
+                  -DMPFR_INCLUDE_DIR="${{ runner.temp }}/cgal_dir/auxiliary/gmp/include" \
                   ../src \
               && ninja -v install"
           else
