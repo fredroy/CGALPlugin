@@ -59,6 +59,7 @@ jobs:
                   -DCMAKE_PREFIX_PATH="$SOFA_ROOT/lib/cmake" \
                   -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_INSTALL_PREFIX="$WORKSPACE_INSTALL_PATH" \
+                  -DMPFR_LIBRARIES="$MPFR_LIBRARIES" \
                   ../src \
               && ninja -v install"
           else
