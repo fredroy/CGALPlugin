@@ -27,6 +27,10 @@
 
 #define CGAL_MESH_2_VERBOSE
 
+// fix compilation error with CGAL<6 and boost >= 1.88
+#include <boost/mpl/if.hpp>
+#include <boost/next_prior.hpp>
+
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Constrained_Delaunay_triangulation_2.h>
 #include <CGAL/Constrained_triangulation_plus_2.h>

@@ -26,6 +26,10 @@
 #include <sofa/core/topology/BaseMeshTopology.h>
 #include <sofa/helper/OptionsGroup.h>
 
+// fix compilation error with CGAL<6 and boost >= 1.88
+#include <boost/mpl/if.hpp>
+#include <boost/next_prior.hpp>
+
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Polygon_mesh_processing/corefinement.h>
 #include <CGAL/Surface_mesh.h>

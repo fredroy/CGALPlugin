@@ -31,6 +31,9 @@
 
 #include <CGAL/version.h>
 
+// fix compilation error with CGAL<6 and boost >= 1.88
+#include <boost/next_prior.hpp>
+
 #include <CGAL/Polyhedron_3.h>
 #include <CGAL/Polyhedron_incremental_builder_3.h>
 
