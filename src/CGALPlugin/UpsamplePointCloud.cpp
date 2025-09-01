@@ -21,6 +21,11 @@
 ******************************************************************************/
 #include <CGALPlugin/UpsamplePointCloud.h>
 
+
+// fix compilation error with CGAL<6 and boost >= 1.88
+#include <boost/mpl/if.hpp>
+#include <boost/next_prior.hpp>
+
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/edge_aware_upsample_point_set.h>
 #include <CGALPlugin/config.h>

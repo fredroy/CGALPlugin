@@ -20,6 +20,11 @@
 * Contact information: contact@sofa-framework.org                             *
 ******************************************************************************/
 #include <CGALPlugin/PoissonSurfaceReconstruction.h>
+
+// fix compilation error with CGAL<6 and boost >= 1.88
+#include <boost/mpl/if.hpp>
+#include <boost/next_prior.hpp>
+
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Polyhedron_3.h>
 #include <CGAL/poisson_surface_reconstruction.h>

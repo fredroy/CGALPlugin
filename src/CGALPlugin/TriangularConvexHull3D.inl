@@ -23,6 +23,10 @@
 
 #include <CGALPlugin/TriangularConvexHull3D.h>
 
+// fix compilation error with CGAL<6 and boost >= 1.88
+#include <boost/mpl/if.hpp>
+#include <boost/next_prior.hpp>
+
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/point_generators_3.h>
 #include <CGAL/algorithm.h>
